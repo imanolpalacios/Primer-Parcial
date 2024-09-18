@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+main {
+    flex: 1;
+  }
+  
+:root {
+    --mainColor: #162521;
+    --mainColorLight: #C0E0DE;
+    --secondaryColor: #4F7CAC;
+    --textColor: #3C474B;
+    --thirdColor: #9EEFE5;
+  }
+  
+  img {
+    width: 100%;
+  }
+
+/* HEADER */
+  
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: #C0E0DE;
+    color: #162521;
+}
+
+
+/* Menu Hamburguesa */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #162521;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #162521;
+    }
+
+    .cerrar-menu {
+        color: #162521;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #162521;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        color: #C0E0DE;
+        z-index: 1;
+        background-color: #C0E0DE;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #162521;
+    }
+}
+
+
+/* FOOTER */
+
+
+footer {
+    text-align: center;
+    border-top: 5px solid black;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    color: #162521;
+    align-items: center;
+    background-color: #C0E0DE;
+  }
+
+.divfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer figure {
+    width: 60px;
+}
+
+
+/* MAIN */
+
+.ptitle {
+    text-align: center;
+    margin-top: 1.7rem;
+}
+
+.cajadesc {
+    text-align: center;
+}
+
+.pdesc {
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.pcontenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+.contsoft {
+    display: flex;
+    margin-top: 10px; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.pcaja {
+    border: 1px solid #4F7CAC;
+    border-radius: 20px;
+    padding: 10px;
+}
+.mcaja {
+    border: 1px solid #4F7CAC;
+    border-radius: 20px;
+    padding: 10px;
+    width: 50%;
+}
+
+.mfigure {
+    width: 25%;
+    margin: auto;
+    
+}
+
+.cajatec {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.imgcss {
+    width: 100px;
+}
+
+.cajatec .imghtml, .imgjs {
+    width: 150px;
+}
+
+
+
+.imgsop {
+    width: 200px;;
+    margin-left: 5px;
+    
+}
+  
+.soportetxt {
+    padding: 10px;
+    text-align: center;
+   
+}
+.soportes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+.cajatxt{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+    .pcontenedor {
+        flex-direction: row;
+    }
+
+    .pdesc {
+        width: 550px;
+    }
+
+    .cajatec {
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 0px;
+    }
+    .imgsop{
+        width: 50%;
+    }
+    .soportes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .soportetxt{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+    .mcaja{
+        width: 50%;
+        text-align: center
+    }
+    .cajatxt{
+        display: flex;
+        text-align: center;
+        margin: auto;
+    }
+    .cajatit{
+        display:flex;
+        margin: auto;
+    }
+    .cajasop{
+        display: flex;
+        flex-direction: column;
+    }
+    .mfigure{
+        width: 100px;
+    }
+    
+    
+}
+
+@media (min-width: 1024px) {
+    .pdesc {
+        width: 750px;
+    }
+    .cajatec {
+        margin-right: 60px;
+        margin-left: 60px;
+    } 
+    .soportetxt {
+        display: flex;
+        text-align: center;
+       
+      }
+    .contsoft{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content:space-evenly;
+        margin-top: 10px;
+    }
+    .mcaja{
+        width: 50%;
+    }
+    .mfigure{
+        margin: auto;
+    }
+    .soportes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content:stretch;
+    }
+    .imgsop{
+        width: 120px ;
+        margin-left: 5px;
+    }
+}
